@@ -3,3 +3,7 @@ Server/bin
 Server/obj
 Client/bin
 Client/obj
+Packet/bin
+Packet/obj
+ServerModule/bin
+ServerModule/obj
