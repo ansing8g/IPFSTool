@@ -1,0 +1,15 @@
+C:\Users\Ansing8\Desktop\GitHub\IPFSTool\Packet\bin\Debug\net6.0\Packet.deps.json
+C:\Users\Ansing8\Desktop\GitHub\IPFSTool\Packet\bin\Debug\net6.0\Packet.dll
+C:\Users\Ansing8\Desktop\GitHub\IPFSTool\Packet\bin\Debug\net6.0\Packet.pdb
+C:\Users\Ansing8\Desktop\GitHub\IPFSTool\Packet\bin\Debug\net6.0\ServerModule.dll
+C:\Users\Ansing8\Desktop\GitHub\IPFSTool\Packet\bin\Debug\net6.0\ServerModule.pdb
+C:\Users\Ansing8\Desktop\GitHub\IPFSTool\Packet\obj\Debug\net6.0\Packet.csproj.AssemblyReference.cache
+C:\Users\Ansing8\Desktop\GitHub\IPFSTool\Packet\obj\Debug\net6.0\Packet.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ansing8\Desktop\GitHub\IPFSTool\Packet\obj\Debug\net6.0\Packet.AssemblyInfoInputs.cache
+C:\Users\Ansing8\Desktop\GitHub\IPFSTool\Packet\obj\Debug\net6.0\Packet.AssemblyInfo.cs
+C:\Users\Ansing8\Desktop\GitHub\IPFSTool\Packet\obj\Debug\net6.0\Packet.csproj.CoreCompileInputs.cache
+C:\Users\Ansing8\Desktop\GitHub\IPFSTool\Packet\obj\Debug\net6.0\Packet.csproj.CopyComplete
+C:\Users\Ansing8\Desktop\GitHub\IPFSTool\Packet\obj\Debug\net6.0\Packet.dll
+C:\Users\Ansing8\Desktop\GitHub\IPFSTool\Packet\obj\Debug\net6.0\refint\Packet.dll
+C:\Users\Ansing8\Desktop\GitHub\IPFSTool\Packet\obj\Debug\net6.0\Packet.pdb
+C:\Users\Ansing8\Desktop\GitHub\IPFSTool\Packet\obj\Debug\net6.0\ref\Packet.dll
