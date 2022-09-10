@@ -86,6 +86,13 @@ namespace Client
                 return;
             }
 
+            if(false == TreeViewIPFS.SelectedNode.Text.Equals("/") &&
+                0 >= TreeViewIPFS.SelectedNode.Nodes.Count)
+            {
+                MessageBox.Show("IPFS Select Not Folder", "TreeView IPFS", MessageBoxButtons.OK);
+                return;
+            }
+
             if (null == TreeViewLocal.SelectedNode)
             {
                 MessageBox.Show("Local Select Node Null", "TreeView Local", MessageBoxButtons.OK);
@@ -112,11 +119,17 @@ namespace Client
                 node = node.Parent;
             }
 
+            TreeNode rootnode = TreeViewLocal.SelectedNode;
+            while(null != rootnode.Parent)
+            {
+                rootnode = rootnode.Parent;
+            }
+
             string[] tempSelectPath = LocalPath.Split('/');
 
             Packet.CtoS.Upload upload = new Packet.CtoS.Upload();
             upload.IPFSPath = IPFSPath;
-            upload.LocalPath = TextBoxLocalPath.Text.Replace($"\\{TreeViewLocal.TopNode.Text}", "");
+            upload.LocalPath = TextBoxLocalPath.Text.Replace($"\\{rootnode.Text}", "");
             upload.SelectPath =  SelectPath;
             List<string> listFile = new List<string>();
             GetLeaf(TreeViewLocal.SelectedNode, "", ref listFile);

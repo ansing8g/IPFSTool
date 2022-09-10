@@ -85,7 +85,7 @@ namespace Server
                 Server.Instance.Send(_socket, new Packet.StoC.Upload()
                 {
                     ResultState = Packet.StoC.Upload.State.Fail,
-                    Message = "Upload Start and GetFile Fail"
+                    Message = "Upload File Data Null"
                 });
                 return;
             }
@@ -109,7 +109,7 @@ namespace Server
                 Server.Instance.Send(_socket, new Packet.StoC.Upload()
                 {
                     ResultState = Packet.StoC.Upload.State.Fail,
-                    Message = "Upload Start and GetFile Fail"
+                    Message = "Upload GetFile Fail"
                 });
                 return;
             }

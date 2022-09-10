@@ -268,14 +268,17 @@ namespace Server
             {
                 rootviewdata.Type = Packet.StoC.ViewData.DataType.Directory;
 
-                foreach (Entrie entrie in rootlsdata!.Entries)
+                if (null != rootlsdata!.Entries)
                 {
-                    Packet.StoC.ViewData? leafviewdata = 0 == entrie.Type ? await ls(true == path.Equals("/") ? path + entrie.Name : path + "/" + entrie.Name) : new Packet.StoC.ViewData();
-
-                    if (null != leafviewdata)
+                    foreach (Entrie entrie in rootlsdata!.Entries)
                     {
-                        leafviewdata.Name = entrie.Name;
-                        rootviewdata.listData.Add(leafviewdata);
+                        Packet.StoC.ViewData? leafviewdata = 0 == entrie.Type ? await ls(true == path.Equals("/") ? path + entrie.Name : path + "/" + entrie.Name) : new Packet.StoC.ViewData();
+
+                        if (null != leafviewdata)
+                        {
+                            leafviewdata.Name = entrie.Name;
+                            rootviewdata.listData.Add(leafviewdata);
+                        }
                     }
                 }
             }

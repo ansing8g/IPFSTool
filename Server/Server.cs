@@ -154,7 +154,7 @@ namespace Server
                 {
                     if (now > node.ValueRef.m_recvtime.AddSeconds(10.0))
                     {
-                        listTimeOverNode.Add(node);
+                        //listTimeOverNode.Add(node);
                     }
                     else if (now >= node.ValueRef.m_recvtime.AddSeconds(5.0))
                     {
@@ -218,7 +218,7 @@ namespace Server
             {
                 if (true == System.IO.Directory.Exists(UploadPath))
                 {
-                    System.IO.Directory.Delete(UploadPath, true);
+                    //System.IO.Directory.Delete(UploadPath, true);
                 }
 
                 m_uploadinfo = null;

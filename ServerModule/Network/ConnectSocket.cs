@@ -32,7 +32,25 @@ namespace ServerModule.Network
                 m_total_bufsize = _total_bufsize;
                 m_offset = 0;
 
-                IPEndPoint end_point = new IPEndPoint(IPAddress.Parse(_ip), _port);
+                IPAddress? ipaddress = null;
+                if(false == IPAddress.TryParse(_ip, out ipaddress))
+                {
+                    IPAddress[] arripaddress = Dns.GetHostAddresses(_ip);
+                    if(null == arripaddress ||
+                        0 >= arripaddress.Length)
+                    {
+                        return false;
+                    }
+
+                    ipaddress = arripaddress[0];
+                }
+
+                if(ipaddress == null)
+                {
+                    return false;
+                }
+
+                IPEndPoint end_point = new IPEndPoint(ipaddress, _port);
 
                 m_socket = new Socket(end_point.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
                 m_socket.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
